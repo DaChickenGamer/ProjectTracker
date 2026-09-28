@@ -8,8 +8,11 @@
         WindowStyle="None"
         WindowStartupLocation="Manual"
         ResizeMode="NoResize"
-        Title="Project Display" Height="300" Width="200">
-    <Grid>
-        <TextBlock HorizontalAlignment="Center" Text="Projects" />
-    </Grid>
+        Title="Project Display" Height="300" Width="200"
+        AllowsTransparency="True"
+        Background="Transparent"
+        >
+        <Grid Background="White">
+            <TextBlock HorizontalAlignment="Center" Text="Projects" />
+        </Grid>
 </Window>

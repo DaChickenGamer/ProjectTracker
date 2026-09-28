@@ -21,13 +21,18 @@ public partial class MainWindow : Window
         InitializeComponent();
         
         SourceInitialized += MainWindow_SourceInitialized;
+        
+        ShowInTaskbar = false;
+        
+        Width = Config.Instance.Window.Width;
+        Height = Config.Instance.Window.Height;
     }
 
     private void MainWindow_SourceInitialized(object sender, EventArgs e)
     {
         var workArea = SystemParameters.WorkArea;
         
-        Left = workArea.Right - Width;
-        Top = workArea.Top;
+        Left = workArea.Right - Width - Config.Instance.Window.MarginLeft;
+        Top = workArea.Top + Config.Instance.Window.MarginTop;
     }
 }
